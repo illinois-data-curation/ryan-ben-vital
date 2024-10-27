@@ -22,11 +22,12 @@ Below explicitly details the assigned tasks of each team member, along with due 
 ### Vital
 * By Sunday 11/10
   * Programmatically integrate datasets using Python and Pandas
+  * Transparent data profiling and quality assessment
   * Write a summary of tasks completed, and any concerns or obstacles faced to add to the progress report
 
 ### Ryan
 * By Wednesday 11/13
-  * Transparent data profiling, quality assessment, and cleaning using Python and Pandas
+  * Data cleaning using Python and Pandas
   * Implement simple data analysis and/or visualization using SKLearn and Matplotlib
   * Write a summary of tasks completed, and any concerns or obstacles faced to add to the progress report
 
@@ -34,9 +35,9 @@ Below explicitly details the assigned tasks of each team member, along with due 
 On 11/14 and/or 11/15 we will meet up and compile our progress report together.
 
 # Datasets
-Our first dataset is a json dataset from [National Oceanic and Atmospheric Administration (NOAA)](https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/statewide/time-series/33/pcp/1/0/2009-2024).
+Our first dataset is a json dataset from [National Oceanic and Atmospheric Administration (NOAA)](https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/statewide/time-series/33/pcp/1/0/2009-2024). This dataset is available under a Creative Commons CC0 license.
 
-Our second dataset is a csv dataset from [data.iowa.gov](https://data.iowa.gov/Crashes/Vehicle-Crashes-in-Iowa/tw78-ziwj/about_data).
+Our second dataset is a csv dataset from [data.iowa.gov](https://data.iowa.gov/Crashes/Vehicle-Crashes-in-Iowa/tw78-ziwj/about_data). This dataset is available under an Attribution 4.0 International (CC BY 4.0) license.
 
 # Timeline
 We are splitting our project into two halves, one to be completed before the November 15 status report, and one before the final deadline.
