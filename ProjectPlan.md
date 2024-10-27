@@ -34,7 +34,9 @@ Below explicitly details the assigned tasks of each team member, along with due 
 On 11/14 and/or 11/15 we will meet up and compile our progress report together.
 
 # Datasets
-Identify and describe the two datasets that you will use. If you are looking for ideas for datasets to use, please reach out via Campuswire.
+Our first dataset is a json dataset from [National Oceanic and Atmospheric Administration (NOAA)](https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/statewide/time-series/33/pcp/1/0/2009-2024).
+
+Our second dataset is a csv dataset from [data.iowa.gov](https://data.iowa.gov/Crashes/Vehicle-Crashes-in-Iowa/tw78-ziwj/about_data).
 
 # Timeline
 We are splitting our project into two halves, one to be completed before the November 15 status report, and one before the final deadline.
