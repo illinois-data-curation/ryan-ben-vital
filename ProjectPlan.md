@@ -1,14 +1,14 @@
 # Overview
-The overall goal of our project is to determine if there is a relationship between the number of car accidents and amount of precipitation each month, using data from a 2 decade timeframe across the United States. We hope to uncover a relationship by combining data from these two domains, and then effectively communicate our findings through intuitive visualizations. 
+The overall goal of our project is to determine if there is a relationship between the number of car accidents and amount of precipitation each month, using data from a timeframe from 2009-2024 in Iowa. We hope to uncover a relationship by combining data from these two domains, and then effectively communicate our findings through intuitive visualizations. 
 
-More specifically, we are going to use precipitation data drawn from NOAA, and car accident data drawn from _____. During data integration, we will find average precipitations each month over our 20 year timeframe, and also find average car accidents each month over our 20 year timeframe. This will involve grouping the data by month and aggregating it by mean. After that we will have a tidy dataset that is fit for our use, containing 1 record for each month, and each record will have two columns, precipitation and number of crashes. From there, we can visualize the data.
+More specifically, we are going to use precipitation data drawn from NOAA, and car accident data drawn from _____. During data integration, we will find average precipitations each month over our timeframe, and also find average car accidents each month over our timeframe. This will involve grouping the data by month and aggregating it by mean. After that we will have a tidy dataset that is fit for our use, containing 1 record for each month, and each record will have two columns, precipitation and number of crashes. From there, we can visualize the data.
 
 After determining what sort of relationship exists, we can project expected future numbers of car accidents based on expected future amounts of precipitation. Long term changes in climate and precipitation could have implications on traffic safety requirements. This could prove a need for future increases in proactive measures in traffic safety amid increasing amounts of precipitation in certain regions.
 
 The people who would benefit from this analysis are urban planners, emergency response services, and climate change researchers. Potential societal impacts of this analaysis are more general awareness of the need for safe driving practices, especially during increased precipitation.
 
 # Research Question(s)
-Is there a correlation between the number of car accidents and amount of precipitation per month basis within a 2 decade timeframe.
+Is there a correlation between the number of car accidents and amount of precipitation per month basis within our 2009-2024 timeframe.
 
 # Team
 Below explicitly details the assigned tasks of each team member, along with due dates for each person's tasks.
