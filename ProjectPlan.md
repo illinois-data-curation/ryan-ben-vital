@@ -6,7 +6,7 @@ The people who would benefit from this analysis are urban planners, emergency re
 
 
 # Research Question(s)
-Is there a correlation between the number of car accidents and amount of precipitation per month basis within our 2009-2024 timeframe.
+Is there a correlation between the number of car accidents and amount of precipitation per month basis within our 2009-2024 timeframe within Iowa?
 
 # Team
 Below explicitly details the assigned tasks of each team member, along with due dates for each person's tasks.
