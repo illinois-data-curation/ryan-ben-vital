@@ -39,9 +39,9 @@ Below explicitly details the assigned tasks of each team member, along with due 
 On 11/14 and/or 11/15 we will meet up and compile our progress report together.
 
 # Datasets
-Our first dataset is a JSON dataset from [National Oceanic and Atmospheric Administration (NOAA)](https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/statewide/time-series/33/pcp/1/0/2009-2024). This dataset is available under a Creative Commons CC0 1.0 Universal (CC0) license.
+Our first dataset is a JSON dataset from [National Oceanic and Atmospheric Administration (NOAA)](https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/statewide/time-series/33/pcp/1/0/2009-2024). This dataset is available under a Creative Commons CC0 1.0 Universal (CC0) license. This dataset contains precipitation for each month from 2009 to 2024.
 
-Our second dataset is a CSV dataset from [Iowa Open Data ](https://data.iowa.gov/Crashes/Vehicle-Crashes-in-Iowa/tw78-ziwj/about_data). This dataset is available under a Creative Commons Attribution 4.0 International (CC BY 4.0) license.
+Our second dataset is a CSV dataset from [Iowa Open Data ](https://data.iowa.gov/Crashes/Vehicle-Crashes-in-Iowa/tw78-ziwj/about_data). This dataset is available under a Creative Commons Attribution 4.0 International (CC BY 4.0) license. This dataset contains information on vehicle crashes from 2009 to 2024. The dataset includes information such as the time and date, major cause, environmental factors, road factors, surface conditions, weather conditions, and roadway conditions.
 
 # Timeline
 We are splitting our project into two halves, one to be completed before the November 15 status report, and one before the final deadline.
