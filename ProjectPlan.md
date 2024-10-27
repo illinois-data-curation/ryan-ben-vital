@@ -10,6 +10,8 @@ After determining the existence of a possible relationship, we can have a better
 
 The people who would benefit from this analysis are urban planners, emergency response services, and climate change researchers. Potential societal impacts of this analysis are more general awareness of the need for safe driving practices, especially during increased precipitation.
 
+We can also construct a time-series analysis of precipitation over our 2009 to 2024 timeframe to determine how precipitation is changing, and then use that information to project precipitation into the future, and with that, project the amount of car crashes into the future.
+
 
 # Research Question(s)
 Is there a correlation between the number of car accidents and amount of precipitation per month basis within our 2009-2024 timeframe within Iowa?
@@ -49,12 +51,12 @@ Below explicitly details the assigned tasks of each team member, along with due 
   * Write a summary of tasks completed, and any concerns or obstacles faced to add to the progress report
     * Document process of task completion, including decisions made and challenges encountered
 
-On 11/14 and/or 11/15 we will meet up and compile our progress report together.
+On November 14th and/or November 15th we will meet up and compile our progress report together. We will put together the summaries that we previously prepared, and also further plan out our next steps for the project.
 
 # Datasets
 Our first dataset is a JSON dataset from [National Oceanic and Atmospheric Administration (NOAA)](https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/statewide/time-series/33/pcp/1/0/2009-2024). This dataset is available under a Creative Commons CC0 1.0 Universal (CC0) license. This dataset contains precipitation for each month from 2009 to 2024.
 
-Our second dataset is a CSV dataset from [Iowa Open Data ](https://data.iowa.gov/Crashes/Vehicle-Crashes-in-Iowa/tw78-ziwj/about_data). This dataset is available under a Creative Commons Attribution 4.0 International (CC BY 4.0) license. This dataset contains information on vehicle crashes from 2009 to 2024. The dataset includes information such as the time and date, major cause, environmental factors, road factors, surface conditions, weather conditions, and roadway conditions.
+Our second dataset is a CSV dataset from [Iowa Open Data ](https://data.iowa.gov/Crashes/Vehicle-Crashes-in-Iowa/tw78-ziwj/about_data). This dataset is available under a Creative Commons Attribution 4.0 International (CC BY 4.0) license. This dataset contains information on vehicle crashes from 2009 to 2024. The dataset includes information such as the time and date, major cause, environmental factors, road factors, surface conditions, weather conditions, and roadway conditions. We can filter this dataset based on `weather_condtions`, so that our analysis will focus on the accidents occurred in certain conditions.
 
 # Timeline
 We are splitting our project into two halves, one to be completed before the November 15 status report, and one before the final deadline.
