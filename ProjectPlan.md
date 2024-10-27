@@ -35,9 +35,9 @@ Below explicitly details the assigned tasks of each team member, along with due 
 On 11/14 and/or 11/15 we will meet up and compile our progress report together.
 
 # Datasets
-Our first dataset is a json dataset from [National Oceanic and Atmospheric Administration (NOAA)](https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/statewide/time-series/33/pcp/1/0/2009-2024). This dataset is available under a Creative Commons CC0 license.
+Our first dataset is a json dataset from [National Oceanic and Atmospheric Administration (NOAA)](https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/statewide/time-series/33/pcp/1/0/2009-2024). This dataset is available under a Creative Commons CC0 1.0 Universal (CC0) license.
 
-Our second dataset is a csv dataset from [data.iowa.gov](https://data.iowa.gov/Crashes/Vehicle-Crashes-in-Iowa/tw78-ziwj/about_data). This dataset is available under an Attribution 4.0 International (CC BY 4.0) license.
+Our second dataset is a csv dataset from [data.iowa.gov](https://data.iowa.gov/Crashes/Vehicle-Crashes-in-Iowa/tw78-ziwj/about_data). This dataset is available under a Creative Commons Attribution 4.0 International (CC BY 4.0) license.
 
 # Timeline
 We are splitting our project into two halves, one to be completed before the November 15 status report, and one before the final deadline.
