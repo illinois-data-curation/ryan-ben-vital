@@ -34,13 +34,42 @@ All the visualizations were saved to the results folder.
 
 ## Updated Project Vision
 
-idk lol
+The overall goal of this project will be to explore a correlation phenomenon between the number of car accidents and amount of precipitation per month within Iowa, using data from a 2014-2024 timeframe. 
 
 ## Updated Timeline and Next Task Assignments
 
-* Create a reproducible package
-* Automated end-to-end workflow execution
-* Accurate citation of data and software used
-* Create metadata describing your package 
-* Archive your project in a repository, obtaining a persistent identifier
+Everyone needs to:
 
+* Move their code steps to .py files for the workflow
+    * Export any intermediate data to csv files
+* Add markdown annotations to their code notebook
+
+On Saturday 11/16 we will meet up and knock out the following tasks together:
+
+Ryan
+* Automated Workflow (cf. Week 9-10)
+    * Snakemake workflow automating your end-to-end analysis workflow from acquisition to result visualization.
+    * Run All script that can be used to re-execute your end-to-end analysis workflow
+    * Documentation describing the steps required to repeat your workflow
+
+Ben
+* Reproducible package (cf. Week 8)
+    * Sufficient information to allow someone else to reproduce your analysis including:
+        * Documentation describing steps someone else needs to take to reproduce your results
+        * Data or documentation describing how to obtain data used
+        * All code, workflow scripts, etc., needed to reproduce your results
+        * Actual results of your analysis including output files, visualizations, etc.
+        * Specification of software dependencies (e.g., requirements.txt) and record of specific packages used (e.g., output of pip freeze). Optionally, a Dockerfile and container image pushed to Dockerhub.
+        * Optionally, a Dockerfile and container image pushed to DockerHub or a CodeOcean capsule
+    * Licenses for data and software created as part of your project
+
+Vital
+* Citation of data and software used (cf. Weeks 11-12)
+    * Accurate citations of the data and/or software used in your project in conformance with standards
+* Metadata describing your dataset and package (cf. Week 12)
+    * Data dictionary or codebook as text file, PDF, or self-describing data formats.
+    * Descriptive metadata describing your project in conformance with a standard such as DataCite, Schema.org.
+* Archival record (cf. Week 13)
+    * An copy of your project submitted to the Zenodo long-term archive or a CodeOcean capsule
+* Persistent Identifier (cf. Week 13)
+    * Persistent identifier obtained from the long-term archive
