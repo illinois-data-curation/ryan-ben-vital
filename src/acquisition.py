@@ -14,7 +14,7 @@ checksum = hashlib.sha256(response.text.encode('utf-8')).hexdigest()
 if checksum == checksum_verify:
     print('NCEI checksum verification passed.\n')
     df_ncei = pd.read_csv(StringIO(response.text), skiprows=4)
-    df_ncei.to_csv('data/raw/ncei.csv')
+    df_ncei.to_csv('data/raw/ncei.csv', index=False)
 else:
    print('NCEI checksum verification failed.')
 
@@ -31,8 +31,8 @@ if checksum == checksum_verify:
     df_iowa1 = df_iowa[0:194391]
     df_iowa2 = df_iowa[194391:388782]
     df_iowa3 = df_iowa[388782:]
-    df_iowa1.to_csv('data/raw/iowa1.csv')
-    df_iowa2.to_csv('data/raw/iowa2.csv')
-    df_iowa3.to_csv('data/raw/iowa3.csv')
+    df_iowa1.to_csv('data/raw/iowa1.csv', index=False)
+    df_iowa2.to_csv('data/raw/iowa2.csv', index=False)
+    df_iowa3.to_csv('data/raw/iowa3.csv', index=False)
 else:
    print('data.iowa.gov checksum verification failed.')
