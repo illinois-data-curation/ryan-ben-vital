@@ -8,7 +8,7 @@ rule runall:
 
 rule get_data:
     input:
-        "../checksums.txt"
+        "checksums.txt"
     output:
         "../data/raw/ncei.csv",
         "../data/raw/iowa1.csv",

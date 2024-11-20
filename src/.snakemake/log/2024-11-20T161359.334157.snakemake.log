@@ -1,0 +1,7 @@
+host: Ryans-MacBook-Pro-10.local
+Building DAG of jobs...
+MissingInputException in rule get_data in file /Users/ryansponzilli/Developer/UIUC/is477/ryan-ben-vital/src/Snakefile, line 9:
+Missing input files for rule get_data:
+    output: ../data/raw/ncei.csv, ../data/raw/iowa1.csv, ../data/raw/iowa2.csv, ../data/raw/iowa3.csv
+    affected files:
+        ../checksums.txt

@@ -1,0 +1,26 @@
+host: Ryans-MacBook-Pro-10.local
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job             count
+------------  -------
+prepare_data        1
+total               1
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Nov 20 16:20:17 2024]
+localrule prepare_data:
+    input: ../data/raw/ncei.csv, ../data/raw/iowa1.csv, ../data/raw/iowa2.csv, ../data/raw/iowa3.csv
+    output: ../data/processed/integrated.csv
+    jobid: 0
+    reason: Missing output files: ../data/processed/integrated.csv
+    resources: tmpdir=/var/folders/41/_gkgvhb94wd4156zplzr4cg00000gn/T
+
+[Wed Nov 20 16:20:21 2024]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: .snakemake/log/2024-11-20T162017.764910.snakemake.log
