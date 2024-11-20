@@ -1,0 +1,48 @@
+rule runall:
+    input:
+        "../results/regression-output.md",
+        "../results/heatmap.png",
+        "../results/lineplot.png",
+        "../results/lmplot.png",
+        "../results/pairplot.png"
+
+rule get_data:
+    input:
+        "../checksums.txt"
+    output:
+        "../data/raw/ncei.csv",
+        "../data/raw/iowa1.csv",
+        "../data/raw/iowa2.csv",
+        "../data/raw/iowa3.csv"
+    shell:
+        "python acquisition.py"
+
+rule prepare_data:
+    input:
+        "../data/raw/ncei.csv",
+        "../data/raw/iowa1.csv",
+        "../data/raw/iowa2.csv",
+        "../data/raw/iowa3.csv"
+    output:
+        "../data/processed/integrated.csv"
+    shell:
+        "python analysis.py"
+
+rule create_graphs:
+    input:
+        "../data/processed/integrated.csv"
+    output:
+        "../results/heatmap.png",
+        "../results/lineplot.png",
+        "../results/lmplot.png",
+        "../results/pairplot.png"
+    shell:
+        "python create-graphs.py"
+
+rule simple_regression:
+    input:
+        "../data/processed/integrated.csv"
+    output:
+        "../results/regression-output.md"
+    shell:
+        "python simple-regression.py"

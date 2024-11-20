@@ -1,1 +1,0 @@
-$\widehat{count} = 200.10317993164062 \cdot precipitation + 1930.255859375$
