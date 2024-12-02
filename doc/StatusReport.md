@@ -1,4 +1,4 @@
-# Progress Report
+# **Progress Report**
 
 ## Updates on Individual Tasks
 
