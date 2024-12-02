@@ -22,7 +22,7 @@ All code in pure python is included in `..src` as `.py` files. This is the code 
 To execute the workflow, the line:
 
 ```
---latency-wait 300
+snakemake --latency-wait 300
 ```
 
 must be run in the terminal while in the `/src` directory.
