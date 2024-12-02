@@ -5,7 +5,7 @@ import requests
 from io import StringIO
 
 
-with open('checksums.txt', 'rb') as f:
+with open('checksums/checksums.txt', 'rb') as f:
     data = f.read()
     checksum_verify = str(data.split()[1]).split("'")[1]
 url = 'https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/statewide/time-series/13/pcp/1/9/1895-2024.csv?base_prd=true&begbaseyear=1901&endbaseyear=2000'
@@ -19,12 +19,13 @@ else:
    print('NCEI checksum verification failed.')
 
 
-with open('checksums.txt', 'rb') as f:
+with open('checksums/checksums.txt', 'rb') as f:
     data = f.read()
     checksum_verify = str(data.split()[3]).split("'")[1]
 endpoint = 'https://data.iowa.gov/resource/tw78-ziwj.csv?$limit=583174'
 response = requests.get(endpoint)
 checksum = hashlib.sha256(response.text.encode('utf-8')).hexdigest()
+print(checksum)
 if checksum == checksum_verify:
     print('data.iowa.gov verification passed.\n')
     df_iowa = pd.read_csv(StringIO(response.text))

@@ -1,0 +1,65 @@
+host: Bens-MacBook-Air-84.local
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job            count
+-----------  -------
+analysis           1
+integration        1
+modeling           1
+runall             1
+total              4
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Dec  2 14:29:52 2024]
+localrule integration:
+    input: ../data/raw/ncei.csv, ../data/raw/iowa1.csv, ../data/raw/iowa2.csv, ../data/raw/iowa3.csv
+    output: ../data/processed/integrated.csv
+    jobid: 2
+    reason: Missing output files: ../data/processed/integrated.csv
+    resources: tmpdir=/var/folders/j7/fswh0x992tzfxgs898w7vv9w0000gn/T
+
+[Mon Dec  2 14:29:55 2024]
+Finished job 2.
+1 of 4 steps (25%) done
+Select jobs to execute...
+Execute 2 jobs...
+
+[Mon Dec  2 14:29:55 2024]
+localrule analysis:
+    input: ../data/processed/integrated.csv
+    output: ../results/heatmap.png, ../results/lineplot.png, ../results/lmplot.png, ../results/pairplot.png
+    jobid: 4
+    reason: Input files updated by another job: ../data/processed/integrated.csv; Code has changed since last execution
+    resources: tmpdir=/var/folders/j7/fswh0x992tzfxgs898w7vv9w0000gn/T
+
+
+[Mon Dec  2 14:29:55 2024]
+localrule modeling:
+    input: ../data/processed/integrated.csv
+    output: ../results/regression-output.md
+    jobid: 1
+    reason: Missing output files: ../results/regression-output.md; Input files updated by another job: ../data/processed/integrated.csv
+    resources: tmpdir=/var/folders/j7/fswh0x992tzfxgs898w7vv9w0000gn/T
+
+[Mon Dec  2 14:29:55 2024]
+Error in rule modeling:
+    jobid: 1
+    input: ../data/processed/integrated.csv
+    output: ../results/regression-output.md
+    shell:
+        python modeling.py
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Dec  2 14:29:58 2024]
+Finished job 4.
+2 of 4 steps (50%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-12-02T142952.620828.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

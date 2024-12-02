@@ -1,0 +1,39 @@
+host: wirelessprv-10-194-176-178.near.illinois.edu
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job            count
+-----------  -------
+acquisition        1
+analysis           1
+integration        1
+modeling           1
+runall             1
+total              5
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Dec  2 12:42:45 2024]
+localrule acquisition:
+    input: checksums/checksums.txt
+    output: ../data/raw/ncei.csv, ../data/raw/iowa1.csv, ../data/raw/iowa2.csv, ../data/raw/iowa3.csv
+    jobid: 3
+    reason: Missing output files: ../data/raw/iowa3.csv, ../data/raw/ncei.csv, ../data/raw/iowa1.csv, ../data/raw/iowa2.csv; Updated input files: checksums/checksums.txt
+    resources: tmpdir=/var/folders/j7/fswh0x992tzfxgs898w7vv9w0000gn/T
+
+Waiting at most 180 seconds for missing files.
+MissingOutputException in rule acquisition in file /Users/benleidig/Downloads/ryan-ben-vital/src/Snakefile, line 9:
+Job 3  completed successfully, but some output files are missing. Missing files after 180 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+../data/raw/iowa1.csv (missing locally, parent dir contents: ncei.csv)
+../data/raw/iowa2.csv (missing locally, parent dir contents: ncei.csv)
+../data/raw/iowa3.csv (missing locally, parent dir contents: ncei.csv)
+Removing output files of failed job acquisition since they might be corrupted:
+../data/raw/ncei.csv
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-12-02T124245.499085.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

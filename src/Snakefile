@@ -6,9 +6,9 @@ rule runall:
         "../results/lmplot.png",
         "../results/pairplot.png"
 
-rule get_data:
+rule acquisition:
     input:
-        "checksums.txt"
+        "checksums/checksums.txt"
     output:
         "../data/raw/ncei.csv",
         "../data/raw/iowa1.csv",
@@ -17,7 +17,7 @@ rule get_data:
     shell:
         "python acquisition.py"
 
-rule prepare_data:
+rule integration:
     input:
         "../data/raw/ncei.csv",
         "../data/raw/iowa1.csv",
@@ -26,9 +26,9 @@ rule prepare_data:
     output:
         "../data/processed/integrated.csv"
     shell:
-        "python analysis.py"
+        "python integration.py"
 
-rule create_graphs:
+rule analysis:
     input:
         "../data/processed/integrated.csv"
     output:
@@ -37,12 +37,12 @@ rule create_graphs:
         "../results/lmplot.png",
         "../results/pairplot.png"
     shell:
-        "python create-graphs.py"
+        "python analysis.py"
 
-rule simple_regression:
+rule modeling:
     input:
         "../data/processed/integrated.csv"
     output:
         "../results/regression-output.md"
     shell:
-        "python simple-regression.py"
+        "python modeling.py"
