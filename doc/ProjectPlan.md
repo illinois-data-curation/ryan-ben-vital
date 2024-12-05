@@ -14,7 +14,6 @@ The people who would benefit from this analysis are urban planners, emergency re
 
 We can also construct a time-series analysis of precipitation over our 2009 to 2024 timeframe to determine how precipitation is changing, and then use that information to project precipitation into the future, and with that, project the amount of car crashes into the future.
 
-
 # Research Question(s)
 Is there a correlation between the number of car accidents and amount of precipitation per month basis within our 2009-2024 timeframe within Iowa?
 

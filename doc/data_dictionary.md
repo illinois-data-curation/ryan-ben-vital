@@ -5,7 +5,6 @@
 ### `year`
 The index variable; the year which the observation represents.
 
-
 ### `precipitation`
 Precipitation measured in inches.
 
