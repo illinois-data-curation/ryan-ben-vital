@@ -1,0 +1,68 @@
+host: wirelessprv-10-193-54-40.near.illinois.edu
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job            count
+-----------  -------
+acquisition        1
+analysis           1
+integration        1
+modeling           1
+runall             1
+total              5
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Dec  5 14:58:56 2024]
+localrule acquisition:
+    input: checksums/checksums.txt
+    output: ../data/raw/ncei.csv, ../data/raw/iowa1.csv, ../data/raw/iowa2.csv, ../data/raw/iowa3.csv
+    jobid: 3
+    reason: Updated input files: checksums/checksums.txt
+    resources: tmpdir=/var/folders/41/_gkgvhb94wd4156zplzr4cg00000gn/T
+
+[Thu Dec  5 14:59:37 2024]
+Finished job 3.
+1 of 5 steps (20%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Dec  5 14:59:37 2024]
+localrule integration:
+    input: ../data/raw/ncei.csv, ../data/raw/iowa1.csv, ../data/raw/iowa2.csv, ../data/raw/iowa3.csv
+    output: ../data/processed/integrated.csv
+    jobid: 2
+    reason: Input files updated by another job: ../data/raw/iowa3.csv, ../data/raw/iowa1.csv, ../data/raw/iowa2.csv, ../data/raw/ncei.csv
+    resources: tmpdir=/var/folders/41/_gkgvhb94wd4156zplzr4cg00000gn/T
+
+[Thu Dec  5 14:59:41 2024]
+Finished job 2.
+2 of 5 steps (40%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Dec  5 14:59:41 2024]
+localrule modeling:
+    input: ../data/processed/integrated.csv
+    output: ../results/regression-output.md
+    jobid: 1
+    reason: Missing output files: ../results/regression-output.md; Input files updated by another job: ../data/processed/integrated.csv
+    resources: tmpdir=/var/folders/41/_gkgvhb94wd4156zplzr4cg00000gn/T
+
+[Thu Dec  5 14:59:41 2024]
+Error in rule modeling:
+    jobid: 1
+    input: ../data/processed/integrated.csv
+    output: ../results/regression-output.md
+    shell:
+        python modeling.py
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-12-05T145856.932113.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

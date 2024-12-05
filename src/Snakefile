@@ -15,7 +15,7 @@ rule acquisition:
         "../data/raw/iowa2.csv",
         "../data/raw/iowa3.csv"
     shell:
-        "python acquisition.py"
+        "python3.11 acquisition.py"
 
 rule integration:
     input:
@@ -26,7 +26,7 @@ rule integration:
     output:
         "../data/processed/integrated.csv"
     shell:
-        "python integration.py"
+        "python3.11 integration.py"
 
 rule analysis:
     input:
@@ -37,7 +37,7 @@ rule analysis:
         "../results/lmplot.png",
         "../results/pairplot.png"
     shell:
-        "python analysis.py"
+        "python3.11 analysis.py"
 
 rule modeling:
     input:
@@ -45,4 +45,4 @@ rule modeling:
     output:
         "../results/regression-output.md"
     shell:
-        "python modeling.py"
+        "python3.11 modeling.py"

@@ -1,0 +1,85 @@
+host: wirelessprv-10-193-54-40.near.illinois.edu
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job            count
+-----------  -------
+acquisition        1
+analysis           1
+integration        1
+modeling           1
+runall             1
+total              5
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Dec  5 15:08:46 2024]
+localrule acquisition:
+    input: checksums/checksums.txt
+    output: ../data/raw/ncei.csv, ../data/raw/iowa1.csv, ../data/raw/iowa2.csv, ../data/raw/iowa3.csv
+    jobid: 3
+    reason: Code has changed since last execution
+    resources: tmpdir=/var/folders/41/_gkgvhb94wd4156zplzr4cg00000gn/T
+
+[Thu Dec  5 15:09:24 2024]
+Finished job 3.
+1 of 5 steps (20%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Dec  5 15:09:24 2024]
+localrule integration:
+    input: ../data/raw/ncei.csv, ../data/raw/iowa1.csv, ../data/raw/iowa2.csv, ../data/raw/iowa3.csv
+    output: ../data/processed/integrated.csv
+    jobid: 2
+    reason: Input files updated by another job: ../data/raw/iowa1.csv, ../data/raw/iowa2.csv, ../data/raw/iowa3.csv, ../data/raw/ncei.csv
+    resources: tmpdir=/var/folders/41/_gkgvhb94wd4156zplzr4cg00000gn/T
+
+[Thu Dec  5 15:09:28 2024]
+Finished job 2.
+2 of 5 steps (40%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Dec  5 15:09:28 2024]
+localrule modeling:
+    input: ../data/processed/integrated.csv
+    output: ../results/regression-output.md
+    jobid: 1
+    reason: Missing output files: ../results/regression-output.md; Input files updated by another job: ../data/processed/integrated.csv
+    resources: tmpdir=/var/folders/41/_gkgvhb94wd4156zplzr4cg00000gn/T
+
+[Thu Dec  5 15:09:40 2024]
+Finished job 1.
+3 of 5 steps (60%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Dec  5 15:09:40 2024]
+localrule analysis:
+    input: ../data/processed/integrated.csv
+    output: ../results/heatmap.png, ../results/lineplot.png, ../results/lmplot.png, ../results/pairplot.png
+    jobid: 4
+    reason: Missing output files: ../results/lmplot.png, ../results/heatmap.png, ../results/lineplot.png, ../results/pairplot.png; Input files updated by another job: ../data/processed/integrated.csv
+    resources: tmpdir=/var/folders/41/_gkgvhb94wd4156zplzr4cg00000gn/T
+
+[Thu Dec  5 15:09:43 2024]
+Finished job 4.
+4 of 5 steps (80%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Dec  5 15:09:43 2024]
+localrule runall:
+    input: ../results/regression-output.md, ../results/heatmap.png, ../results/lineplot.png, ../results/lmplot.png, ../results/pairplot.png
+    jobid: 0
+    reason: Input files updated by another job: ../results/heatmap.png, ../results/pairplot.png, ../results/lmplot.png, ../results/lineplot.png, ../results/regression-output.md
+    resources: tmpdir=/var/folders/41/_gkgvhb94wd4156zplzr4cg00000gn/T
+
+[Thu Dec  5 15:09:43 2024]
+Finished job 0.
+5 of 5 steps (100%) done
+Complete log: .snakemake/log/2024-12-05T150846.009745.snakemake.log
