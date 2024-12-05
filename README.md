@@ -29,13 +29,19 @@ must be run in the terminal while in the `/src` directory.
 
 ## Licenses
 
-### Dataset Created (`data/processed/integrated.csv`)
-This dataset was derived from:
+### Dataset Citations
+Our dataset was derived from:
 
-- National Centers for Environmental Information (NCEI) data, Creative Commons CC0 1.0 Universal (CC0), available at [https://www.ncei.noaa.gov](https://www.ncei.noaa.gov).
-- Iowa Open Data, Creative Commons Attribution 4.0 International (CC BY 4.0), available at [https://data.iowa.gov](https://data.iowa.gov).
+- National Centers for Environmental Information (NCEI) data, Creative Commons CC0 1.0 Universal (CC0), available at [https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/statewide/time-series/13/pcp/1/9/1895-2024?base_prd=true&begbaseyear=1901&endbaseyear=2000](https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/statewide/time-series/13/pcp/1/9/1895-2024?base_prd=true&begbaseyear=1901&endbaseyear=2000).
+- Iowa Open Data, Creative Commons Attribution 4.0 International (CC BY 4.0), available at [https://data.iowa.gov/Crashes/Vehicle-Crashes-in-Iowa/tw78-ziwj/about_data](https://data.iowa.gov/Crashes/Vehicle-Crashes-in-Iowa/tw78-ziwj/about_data).
 
-Modifications have been made to integrate and preprocess the data for analysis. Use of the data must comply with the respective licenses.
+Both datasets are downloaded in CSV format. Modifications have been made to integrate and preprocess the data for analysis. Use of the data must comply with the respective licenses.
+
+### Software Citations
+
+
+
+Use of the software must comply with the respective licenses.
 
 ### Software Created:
 Licensed under the MIT License. See `LICENSE.txt` for details.
