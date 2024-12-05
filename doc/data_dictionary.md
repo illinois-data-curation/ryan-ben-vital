@@ -27,7 +27,7 @@ Crash-wide total of all minor injuries. Minor injuries are generally non-incapac
 ### `possinjury`
 Crash-wide total of all possible injuries, excluding fatal, major or minor injuries, where there is a complaint of pain or injury.
 
-### `uninjury`
+### `unkinjury`
 Crash-wide total of all unknown injuries.
 
 ### `propdmg`
