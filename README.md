@@ -16,7 +16,7 @@ License: Creative Commons CC0 1.0 Universal (CC0)
 
 Available at: [https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/statewide/time-series/13/pcp/1/9/1895-2024?base_prd=true&begbaseyear=1901&endbaseyear=2000](https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/statewide/time-series/13/pcp/1/9/1895-2024?base_prd=true&begbaseyear=1901&endbaseyear=2000)
 
-Imported data is from time range year 1895 to 2024. Dataset includes columns: `Date`, `Value`, `Anomaly`. Column `Date` contains the date of record in the format *YYYYMM*. Column `Value` contains the total precipitation amount for the respective date in column `Date`. Column `Anomaly` contains the anomaly for the respective date in column `Date` and is not used in the this analysis.
+Imported data is from time range year 1895 to 2024. Dataset includes columns: `Date`, `Value`, `Anomaly`. Column `Date` contains the date of record in the format *YYYYMM*. Column `Value` contains the total precipitation amount for the respective date in column `Date`. Column `Anomaly` contains the anomaly for the respective date in column `Date` and is not used in the analysis or model. The dataset was refined to years 2014 to 2024. Included below is every dataset column and respective description from the dataset website:
 
 | Column Name | Description                                               | Data Type |
 |-------------|-----------------------------------------------------------|-----------|
@@ -31,7 +31,7 @@ Terms of Use according to dataset website: "See license."
 
 Available at: [https://data.iowa.gov/Crashes/Vehicle-Crashes-in-Iowa/tw78-ziwj/about_data](https://data.iowa.gov/Crashes/Vehicle-Crashes-in-Iowa/tw78-ziwj/about_data)
 
-Imported data was limited to 583174 rows (from year 2009 to 2024). Included below is every dataset column and respective description from the dataset website:
+Imported data was limited to 583174 rows (from year 2009 to 2024). Columns  `Year`, `Environmental Conditions`, `Surface Conditions`, `Weather Condition`, `Crash Severity`, `Number of Fatalities`, `Number of Injuries`, `Number of Major Injuries`, `Number of Minor Injuries`, `Number of Possible Injuries`, `Number of Unknown Injuries`, and `Amount of Property Damage` are used in the integrated dataset. The dataset was refined to the time range of years 2014 to 2024. Included below is every dataset column and respective description from the dataset website:
 
 | Column Name                          | Description                                                                                                                                                            | Data Type           |
 |--------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|
