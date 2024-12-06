@@ -7,7 +7,8 @@ Link to archival record: []()
 Vitalijs Kurjanovics Kravcenko, Benjamin Leidig, Ryan Sponzilli
 
 ## Summary
-WRITE SUMMARY HERE
+The overall goal of this project is to explore a correlation phenomenon between the number of car accidents and amount of precipitation per month within Iowa, using data from a 2009-2024 timeframe. We combined data from these two domains to successfully communicate our findings through intuitive visualizations and a linear regression model. The precipitation data was drawn from National Oceanic and Atmospheric Administration (NOAA), whilst the car accident data was made available by Iowa’s Open Data Platform. The precipitation data and car accident metrics were integrated together for analysis. After data profiling, quality assessment, and cleaning, we moved on to exploratory data analysis, visualizations, and modeling. The people who would benefit from this analysis are urban planners, emergency response services, and climate change researchers. Potential societal impacts of this analysis are more general awareness of the need for safe driving practices, especially during increased precipitation.
+
 
 ## Data Profile
 
@@ -77,9 +78,10 @@ Both datasets are downloaded in CSV format. Modifications have been made to inte
 
 ## Findings
 
-Link to results: [https://uofi.app.box.com/s/rhognoqb40zuhnnnxhyzgl4vb90p3rjr](https://uofi.app.box.com/s/rhognoqb40zuhnnnxhyzgl4vb90p3rjr)
+Link to our results: [https://uofi.app.box.com/s/rhognoqb40zuhnnnxhyzgl4vb90p3rjr](https://uofi.app.box.com/s/rhognoqb40zuhnnnxhyzgl4vb90p3rjr)
 
-WRITE ME
+After wrangling our data together from our two sources into a single csv file, we began with some exploratory data analysis. Our results consist of four different data visualizations and one linear regression equation. The first visualization is a pair plot that shows `precipitation` plotted against the other nine variables. From these plots we can see that precipitation exhibits a strong positive relationship with `count`, `possinjury`, `mininjury`, and `propdmg`, a weak positive relationship with `uninjury`, `majinjury`, and `fatalities`, and a strong negative relationship with `year`. This suggests that more precipitation results in more minor car accidents than more major car accidents. The second visualization is a heatmap and we have highlighted the row/column of the `precipitation` variable to draw attention to it. This heatmap essentially depicts the same observations that we saw in the pair plot, but in the form of correlation coefficients. The third visualization is a line plot with `count` (number of accidents), and `precipitation` overlayed on the same graph. In this graph we can see that prior to 2017 the two factors don't trend together, but after 2017 they both trend downward together. The fourth visualization is a linear model plot (lmplot). In this visualization look again at the strong positive relationship between `count` and `precipitation`. There is one major outlier, but the rest of the data points are fairly tight to the line of best fit. The other result that we produced is the following linear regression equation: $\widehat{count} = 196.37210083007812 \cdot precipitation + 1943.09619140625$. It shows that on average, for every additional inch of precipitation per year, we can expect 196 additional car accidents to occur. Overall, our findings indicate that a relationship does exist between precipitation and car accidents, specifically in Iowa.
+
 
 ## Future Work
 
