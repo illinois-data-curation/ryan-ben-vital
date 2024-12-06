@@ -7,7 +7,7 @@ Link to archival record: [https://doi.org/10.5281/zenodo.14285990](https://doi.o
 Vitalijs Kurjanovics Kravcenko, Benjamin Leidig, Ryan Sponzilli
 
 ## Summary
-The overall goal of this project is to explore a correlation phenomenon between the number of car accidents and amount of precipitation per month within Iowa, using data from a 2009-2024 timeframe. We combined data from these two domains to successfully communicate our findings through intuitive visualizations and a linear regression model. The precipitation data was drawn from National Oceanic and Atmospheric Administration (NOAA), whilst the car accident data was made available by Iowa’s Open Data Platform. The precipitation data and car accident metrics were integrated together for analysis. After data profiling, quality assessment, and cleaning, we moved on to exploratory data analysis, visualizations, and modeling. The people who would benefit from this analysis are urban planners, emergency response services, and climate change researchers. Potential societal impacts of this analysis are more general awareness of the need for safe driving practices, especially during increased precipitation.
+The overall goal of this project is to explore a correlation phenomenon between the number of car accidents and amount of precipitation per month within Iowa, using data from a 2009-2024 timeframe. We combined data from these two domains to successfully communicate our findings through intuitive visualizations and a linear regression model. The precipitation data was drawn from National Oceanic and Atmospheric Administration (NOAA), whilst the car accident data was made available by Iowa’s Open Data Platform. The precipitation data and car accident datasets were integrated together for analysis. After data profiling, quality assessment, and cleaning, we moved on to exploratory data analysis, visualizations, and modeling. The targeted audoience who could benefit from this analysis are urban planners, emergency response services, and climate change researchers. Potential societal impacts of this analysis are more raising awareness notion surrounding the need for safe driving practices, especially during increased or unexpected precipitation, as well appropiate response by departments responsible for transporation when it comes to resouce scalling. 
 
 
 ## Data Profile
@@ -85,7 +85,7 @@ After wrangling our data together from our two sources into a single csv file, w
 
 ## Future Work
 
-WRITE ME
+Given the scope of the project being mostly targeted towards Iowa, it would be interesting to conduct a similar instance of analysis for states within the Midwest to see if similar trends appear to follow. The pre-processing of the dataset filtered specifically on rain being the condition under which these accidents take place, but resembling scenarios like melted down slush post-snowing could be argued to provide similar conditions in regard to water conditions on roads. The range selection for this decade is likewise something that should be considered, with additional years prior to 2009 potentially being altering to our current findings based on the methodology and steps used. Similarly, a different geographical location with differentiating climate, where precipitation is more abundant, would be interesting point to examine for contrast.
 
 ## Reproducing
 
