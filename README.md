@@ -1,7 +1,7 @@
 # Investigation of Correlation between Weather Events and Car Accidents In Iowa
 
 ## Archival Record
-Link to archival record: []()
+Link to archival record: [https://doi.org/10.5281/zenodo.14285990](https://doi.org/10.5281/zenodo.14285990)
 
 ## Contributors
 Vitalijs Kurjanovics Kravcenko, Benjamin Leidig, Ryan Sponzilli
