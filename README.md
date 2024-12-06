@@ -13,11 +13,11 @@ The overall goal of this project is to explore a correlation phenomenon between 
 ## Data Profile
 
 ### National Centers for Environmental Information (NCEI)
-License: Creative Commons CC0 1.0 Universal (CC0)
+**License:** Creative Commons CC0 1.0 Universal (CC0)
 
-Available at: [https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/statewide/time-series/13/pcp/1/9/1895-2024?base_prd=true&begbaseyear=1901&endbaseyear=2000](https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/statewide/time-series/13/pcp/1/9/1895-2024?base_prd=true&begbaseyear=1901&endbaseyear=2000)
+**Available at:** [https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/statewide/time-series/13/pcp/1/9/1895-2024?base_prd=true&begbaseyear=1901&endbaseyear=2000](https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/statewide/time-series/13/pcp/1/9/1895-2024?base_prd=true&begbaseyear=1901&endbaseyear=2000)
 
-Imported data is from time range year 1895 to 2024. Dataset includes columns: `Date`, `Value`, `Anomaly`. Column `Date` contains the date of record in the format *YYYYMM*. Column `Value` contains the total precipitation amount for the respective date in column `Date`. Column `Anomaly` contains the anomaly for the respective date in column `Date` and is not used in the analysis or model. The dataset was refined to years 2014 to 2024. Included below is every dataset column and respective description from the dataset website:
+**Included below is every dataset column, respective description, and respective data type:**
 
 | Column Name | Description                                               | Data Type |
 |-------------|-----------------------------------------------------------|-----------|
@@ -25,14 +25,16 @@ Imported data is from time range year 1895 to 2024. Dataset includes columns: `D
 | `Value`     | The total precipitation amount for the respective date.   | Number    |
 | `Anomaly`   | The anomaly for the respective date.                      | Number    |
 
+**Description of acquisition arocess programmed in `acquisition.py` and notated in `acquisition.ipynb`:** To aide in the process of reproducibility and dynamic data accession, this dataset is download during the workflow via a URL link. Before accessing the dataset via URL, `src/checksums/checksums.txt` is read and the appropriate and correct checksum is saved into memory for this dataset. Next, the URL used directly links to the dataset download (CSV format). First, the response to the URL is fetched using the `requests` library. Second, the response is converted to text. Third, a checksum is created from the response text using the `hashlib` library. If the generated checksum matches the checksum saved into memory (from `src/checksums/checksums.txt`), the program moves onto the fourth step. If the generated checksum does not match the checksum saved into memory, the program is terminated and the statement, "NCEI checksum verification failed.", is printed. Fourth, the statement, "NCEI checksum verification passed.", is printed and, using the `StringIO` and `pandas` libraries, the response text is read into a *pandas* dataframe (skipping the first four rows that represent dataset metadata). Fifth, the dataframe is saved as a CSV in `data/raw/ncei.csv`.
+
+**Notes on dataset usage:** Imported data is from time range year 1895 to 2024. Dataset includes columns: `Date`, `Value`, `Anomaly`. Column `Date` contains the date of record in the format *YYYYMM*. Column `Value` contains the total precipitation amount for the respective date in column `Date`. Column `Anomaly` contains the anomaly for the respective date in column `Date` and is not used in the analysis or model. The dataset was refined to years 2014 to 2024. This dataset is first read into *pandas* dataframe. The dataframe is then downloaded as a CSV. Modifications have been made to integrate and preprocess the data for analysis. Use of the data must comply with the respective licenses. 
+
 ### Iowa Open Data
-License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+**License:** Creative Commons Attribution 4.0 International (CC BY 4.0)
 
-Terms of Use according to dataset website: "See license."
+**Available at:** [https://data.iowa.gov/Crashes/Vehicle-Crashes-in-Iowa/tw78-ziwj/about_data](https://data.iowa.gov/Crashes/Vehicle-Crashes-in-Iowa/tw78-ziwj/about_data)
 
-Available at: [https://data.iowa.gov/Crashes/Vehicle-Crashes-in-Iowa/tw78-ziwj/about_data](https://data.iowa.gov/Crashes/Vehicle-Crashes-in-Iowa/tw78-ziwj/about_data)
-
-Imported data was limited to 583174 rows (from year 2009 to 2024). Columns  `Year`, `Environmental Conditions`, `Surface Conditions`, `Weather Condition`, `Crash Severity`, `Number of Fatalities`, `Number of Injuries`, `Number of Major Injuries`, `Number of Minor Injuries`, `Number of Possible Injuries`, `Number of Unknown Injuries`, and `Amount of Property Damage` are used in the integrated dataset. The dataset was refined to the time range of years 2014 to 2024. Included below is every dataset column and respective description from the dataset website:
+**The dataset was refined to the time range of years 2014 to 2024. Included below is every dataset column, respective description, and respective data type from the dataset website:**
 
 | Column Name                          | Description                                                                                                                                                            | Data Type           |
 |--------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|
@@ -74,7 +76,9 @@ Imported data was limited to 583174 rows (from year 2009 to 2024). Columns  `Yea
 | `Travel Direction`                   | Cardinal direction of vehicles on primary roads (derived).                                                                                                            | Text                |
 | `Location`                           | Point location for the site of the crash.                                                                                                                             | Point               |
 
-Both datasets are downloaded in CSV format. Modifications have been made to integrate and preprocess the data for analysis. Use of the data must comply with the respective licenses. 
+**Description of acquisition arocess programmed in `acquisition.py` and notated in `acquisition.ipynb`:** To aide in the process of reproducibility and dynamic data accession, this dataset is download during the workflow via a SoQL query. Before accessing the dataset via URL, `src/checksums/checksums.txt` is read and the appropriate and correct checksum is saved into memory for this dataset. Next, the SoQL query used downloads the dataset in CSV format. First, the SoQL query is saved as the endpoint. Second, the response to the query is fetched using the `requests` library. Third, the response is converted to text. Fourth, a checksum is created from the response text using the `hashlib` library. If the generated checksum matches the checksum saved into memory (from `src/checksums/checksums.txt`), the program moves onto the fifth step. If the generated checksum does not match the checksum saved into memory, the program is terminated and the statement, "NCEI checksum verification failed.", is printed. Fifth, the statement, "NCEI checksum verification passed.", is printed and, using the `StringIO` and `pandas` libraries, the response text is read into a *pandas* dataframe (skipping the first four rows that represent dataset metadata). Sixth, to avoid the need for GitHub Large File Storage (GLFS), the dataframe is split into three separate dataframes of equal length. Seventh, the three, separated dataframes are saved as CSVs in `data/raw/iowa1.csv`, `data/raw/iowa2.csv`, and `data/raw/iowa3.csv`.
+
+**Notes on dataset usage:** Imported data was limited to 583,174 rows (from year 2009 to 2024). Columns  `Year`, `Environmental Conditions`, `Surface Conditions`, `Weather Condition`, `Crash Severity`, `Number of Fatalities`, `Number of Injuries`, `Number of Major Injuries`, `Number of Minor Injuries`, `Number of Possible Injuries`, `Number of Unknown Injuries`, and `Amount of Property Damage` are used in the integrated dataset. This dataset is first read into *pandas* dataframe. The dataframe is then separated into three different dataframes. The dataframes are then downloaded as a CSVs. Modifications have been made to integrate and preprocess the data for analysis. Use of the data must comply with the respective licenses.
 
 ## Findings
 
@@ -130,5 +134,5 @@ Use of the datasets must comply with the respective licenses.
 ### Software Citations
 For dependencies, see `doc/requirements.txt`. Use of the software must comply with the respective licenses.
 
-### Software Created:
+### Software Created
 Licensed under the MIT License. See `LICENSE.txt` for details.
