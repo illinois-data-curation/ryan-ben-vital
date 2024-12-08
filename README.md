@@ -127,7 +127,7 @@ All code in pure python is included in the folder, `src`, as `.py` files. This i
 **To execute the workflow, the line:**
 
 ```
-snakemake --latency-wait 300
+snakemake --cores 1 runall
 ```
 
 **must be run in the terminal while in the `/src` directory.**
