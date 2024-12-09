@@ -146,6 +146,8 @@ snakemake --cores 1 runall
 
 **must be run in the terminal while in the `/src` directory.**
 
+**the workflow may take several minutes to execute**
+
 ## References
 
 ### Dataset Citations
