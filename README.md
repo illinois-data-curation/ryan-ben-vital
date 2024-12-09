@@ -92,7 +92,7 @@ In conclusion, the project demonstrated a clear positive correlation between a r
 
 ## Findings
 
-Link to the results: [https://uofi.app.box.com/s/rhognoqb40zuhnnnxhyzgl4vb90p3rjr](https://uofi.app.box.com/s/rhognoqb40zuhnnnxhyzgl4vb90p3rjr)
+Link to the results: [https://uofi.app.box.com/s/rhognoqb40zuhnnnxhyzgl4vb90p3rjr](https://uofi.app.box.com/s/rhognoqb40zuhnnnxhyzgl4vb90p3rjr) (The `results` folder should be placed within the main repository folder. The `data` folder should also be placed within the main repository folder.)
 
 After meticulously combining our data from two distinct sources into a single CSV file, we initiated our analysis with exploratory data analysis (EDA) to uncover patterns and relationships. This phase was crucial for understanding the structure and trends in the data before diving into modeling or deeper statistical analyses. Our findings are summarized through four distinct visualizations and one linear regression equation that together paint a comprehensive picture of the relationships in the dataset.
 
