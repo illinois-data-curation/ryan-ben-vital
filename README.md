@@ -131,6 +131,8 @@ Each `.py` file in folder, `src`, has a respective `.ipynb` file in folder, `doc
 The *NCEI* dataset is collected via a URL link. The *Iowa Open Data* dataset is collected via an API query. Both of these processes are included in the workflow as well as their respective integrity checks in the rule, `acquisition`.
 
 ### Running the Workflow
+The workflow must be run with Python 3.11.1 and all dependencies listed in `requirements.txt`. The workflow must be executed from the `/src` directory. Please note that it may take several minutes to complete.
+
 All code in pure python is included in the folder, `src`, as `.py` files. This is the code used to run the workflow file, `Snakefile`. The `Snakefile` creates five rules: `runall`, `acquisition`, `integration`, `analysis`, and `modeling`.
 
 - Rule `runall` executes all processes necessary to produce `heatmap.png`, `lineplot.png`, `lmplot.png`, `pairplot.png`, and `regression-output.md`.
@@ -144,9 +146,8 @@ All code in pure python is included in the folder, `src`, as `.py` files. This i
 snakemake --cores 1 runall
 ```
 
-**must be run in the terminal while in the `/src` directory.**
+****
 
-**the workflow may take several minutes to execute**
 
 ## References
 
