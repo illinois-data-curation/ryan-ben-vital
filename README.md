@@ -1,10 +1,13 @@
 # Investigation of Correlation between Weather Events and Car Accidents In Iowa
 
+
 ## Archival Record
 Link to archival record: [https://doi.org/10.5281/zenodo.14285990](https://doi.org/10.5281/zenodo.14285990)
 
+
 ## Contributors
 Vitalijs Kurjanovics Kravcenko, Benjamin Leidig, Ryan Sponzilli
+
 
 ## Summary
 The overall goal of the project was to explore a potential correlational relationship between the number of car accidents and the amount of precipitation by month within the state of Iowa. Two datasets were used from online sources for this project. Both sources are outlined in full detail under the Data Profile and References. The source datasets include observations from the years 1895 to 2024; however, the derived data used in the analysis and modeling (referred to as the integrated dataset) includes observations only from 2014 to 2024. By integrating the datasets from two domains—traffic records and historical precipitation measurements—the modeling and analysis aimed to provide insights into how weather conditions influence road safety. The findings of the study were communicated through intuitive visualizations and a predictive linear regression model.
@@ -18,6 +21,7 @@ The targeted audience who could benefit from this analysis includes urban planne
 Through thorough data cleaning, exploratory visualizations, and a predictive linear regression model, the relationship between annual precipitation and total yearly car accidents was not only quantified but also contextualized for its potential applications. This highlights the value of the insights derived from the study and their broad implications for public safety and planning.
 
 In conclusion, the project demonstrated a clear positive correlation between a rise in annual precipitation and total yearly car accidents. These findings are highly relevant for policymakers, transportation departments, and public safety initiatives. As previously stated, they emphasize the critical importance of safe driving practices and resource planning during adverse weather conditions, further underlining the practical value of such analyses in protecting communities.
+
 
 ## Data Profile
 
@@ -92,7 +96,7 @@ In conclusion, the project demonstrated a clear positive correlation between a r
 
 ## Findings
 
-Link to the results: [https://uofi.app.box.com/s/rhognoqb40zuhnnnxhyzgl4vb90p3rjr](https://uofi.app.box.com/s/rhognoqb40zuhnnnxhyzgl4vb90p3rjr) (The `results` folder should be placed within the main repository folder. The `data` folder should also be placed within the main repository folder.)
+**Link to the results:** [https://uofi.app.box.com/s/rhognoqb40zuhnnnxhyzgl4vb90p3rjr](https://uofi.app.box.com/s/rhognoqb40zuhnnnxhyzgl4vb90p3rjr) (The `results` folder should be placed within the main repository folder. The `data` folder should also be placed within the main repository folder.)
 
 After meticulously combining our data from two distinct sources into a single CSV file, we initiated our analysis with exploratory data analysis (EDA) to uncover patterns and relationships. This phase was crucial for understanding the structure and trends in the data before diving into modeling or deeper statistical analyses. Our findings are summarized through four distinct visualizations and one linear regression equation that together paint a comprehensive picture of the relationships in the dataset.
 
@@ -104,7 +108,11 @@ The third visualization is a line plot overlaying count (the number of accidents
 
 The fourth visualization is a linear model plot (lmplot), which reiterates the strong positive relationship between count and precipitation. While the data points are generally tightly clustered around the line of best fit, there is one notable outlier that may require further scrutiny. This outlier could represent an anomaly or an important exception to the general trend.
 
-Finally, our analysis includes the following linear regression equation: $\widehat{count} = 196.37210083007812 \cdot precipitation + 1943.09619140625$. This equation quantifies the relationship between precipitation and car accidents, showing that for every additional inch of annual precipitation, we can expect approximately 196 additional accidents. These findings provide compelling evidence of a significant relationship between precipitation and car accidents, particularly in Iowa. This analysis underscores the importance of considering environmental factors in accident prediction and prevention.
+Finally, our analysis includes the following linear regression equation:
+
+$\widehat{count} = 196.37210083007812 \cdot precipitation + 1943.09619140625$.
+
+This equation quantifies the relationship between precipitation and car accidents, showing that for every additional inch of annual precipitation, we can expect approximately 196 additional accidents. These findings provide compelling evidence of a significant relationship between precipitation and car accidents, particularly in Iowa. This analysis underscores the importance of considering environmental factors in accident prediction and prevention.
 
 
 ## Future Work
@@ -118,6 +126,7 @@ In pre-processing the dataset, the current analysis focused specifically on acci
 The severity of accidents, including the presence of fatalities or injuries, serves as a critical marker for understanding temporal discrepancies in the dataset. Investigating these aspects more deeply could clarify how changing safety features and standards have influenced the definition and frequency of accidents over time.
 
 Finally, extending the analysis beyond the Midwest to regions with markedly different climates could provide further contrasts. For example, examining a country like Colombia, where extreme precipitation, varying altitudes, and less developed infrastructure are prevalent, could offer fascinating insights. Unlike Iowa’s predominantly flat terrain, Colombia’s diverse geography might highlight how altitude and infrastructure deficiencies interact with precipitation to affect road safety. Such a study would provide a valuable global perspective, enriching the understanding of how environmental and infrastructural factors contribute to accidents in various contexts.
+
 
 ## Reproduction of Analysis
 
